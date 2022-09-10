@@ -1,0 +1,573 @@
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+
+<html>
+    <style>
+      @media screen and (max-width: 1060px) {
+        #primary { width:67%; }
+        #secondary { width:30%; margin-left:3%;}  
+      }
+      
+      /* Media Queries: Tabled Portrait */
+      @media screen and (max-width: 768px) {
+        #primary { width:100%; }
+        #secondary { width:100%; margin:0; border:none; }
+      }
+        body {
+          
+            margin:0;
+            padding:0;
+            }
+            section{
+              position:absolute ;
+            }
+            .leaf{
+                position:absolute ;
+                width:100%;
+                height:100%;
+                top:0;
+                left:0;
+            }
+            .leaf div{
+            position:absolute ;
+            display:block ;
+            }
+            .leaf div:nth-child(1){
+                left:10%; 
+                animation:fall 15s linear infinite ;
+                animation-delay:-2s;
+            
+            }
+            .leaf div:nth-child(2){
+                left:25%; 
+                animation:fall 15s linear infinite ;
+                animation-delay:-4s;
+            }
+            .leaf div:nth-child(3){
+                left:40%; 
+                animation:fall 20s linear infinite ;
+                animation-delay:-7s;
+                
+            }
+            .leaf div:nth-child(4){
+                left:60%; 
+               animation:fall 18s linear infinite ; 
+               animation-delay:-5s;
+            }
+            .leaf div:nth-child(5){
+                left:75%; 
+                animation:fall 14s linear infinite ;
+                animation-delay:-5s;
+            }
+            .leaf div:nth-child(6){
+                left:90%; 
+                animation:fall 16s linear infinite ;
+                animation-delay:-10s;
+            }
+            .leaf div:nth-child(7){
+                left:100%; 
+                animation:fall 15s linear infinite ;
+                animation-delay:-4s;
+            }
+            
+            @keyframes fall{
+                0%{
+                    opacity:0.7;
+                    top:-10%;
+                    transform:translateX (20px) rotate(0deg);
+                }
+                20%{
+                  opacity:0.7;
+                  transform:translateX (-20px) rotate(0 deg);
+                }
+                40%{                    opacity:0.5;
+
+            
+                    transform:translateX (-20px) rotate(90deg);
+                }
+                60%{opacity:0.7;
+                    
+                   transform:translateX (-20px) rotate(135deg); 
+                }
+                80%{opacity:0.7;
+                
+                    transform:translateX (-20px) rotate(225deg);
+                }
+                100%{opacity:0.7;
+                    
+                    top:110%;
+                    transform:translateX (-20px) rotate(0deg);
+                }
+                }
+            .leaf1{
+                transform: rotateX(180deg);
+            }
+            h2{
+                position:absolute ;
+                top:40%;
+                width:100%;
+                font-family: 'Courgette', cursive;
+                font-size:4em;
+                text-align:center;
+                transform:translate ;
+                color:#fff;
+                transform:translateY (-50%);
+            }
+    </style>
+    
+    <body>
+        <!--Hey! This is the original version
+of Simple CSS Waves-->
+<html lang="en" style="width: 100%; height:100%; overflow:hidden; ">
+    <style>
+      @media screen and (max-width: 1060px) {
+        #primary { width:67%; }
+        #secondary { width:30%; margin-left:3%;}  
+      }
+      
+      /* Media Queries: Tabled Portrait */
+      @media screen and (max-width: 768px) {
+        #primary { width:100%; }
+        #secondary { width:100%; margin:0; border:none; }
+      }
+      
+      
+      
+      @import url(//fonts.googleapis.com/css?family=Lato:300:400);
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+        .btn { display: inline-block; *display: inline; *zoom: 1; padding: 4px 10px 4px; margin-bottom: 0; font-size: 13px; line-height: 18px; color: #333333; text-align: center;text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); vertical-align: middle; background-color: #f5f5f5; background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6); background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6)); background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6); background-image: -o-linear-gradient(top, #ffffff, #e6e6e6); background-image: linear-gradient(top, #ffffff, #e6e6e6); background-repeat: repeat-x; filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, endColorstr=#e6e6e6, GradientType=0); border-color: #e6e6e6 #e6e6e6 #e6e6e6; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); border: 1px solid #e6e6e6; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); cursor: pointer; *margin-left: .3em; }
+.btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] { background-color: #e6e6e6; }
+.btn-large { padding: 3px 3px; font-size: 15px; line-height: normal; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+.btn:hover { color: #333333; text-decoration: none; background-color: #e6e6e6; background-position: 0 -15px; -webkit-transition: background-position 0.1s linear; -moz-transition: background-position 0.1s linear; -ms-transition: background-position 0.1s linear; -o-transition: background-position 0.1s linear; transition: background-position 0.1s linear; }
+.btn-primary, .btn-primary:hover { text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); color: #ffffff; }
+.btn-primary.active { color: rgba(255, 255, 255, 0.75); }
+.btn-primary { background-color: #4a77d4; background-image: -moz-linear-gradient(top, #6eb6de, #4a77d4); background-image: -ms-linear-gradient(top, #6eb6de, #4a77d4); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4)); background-image: -webkit-linear-gradient(top, #6eb6de, #4a77d4); background-image: -o-linear-gradient(top, #6eb6de, #4a77d4); background-image: linear-gradient(top, #6eb6de, #4a77d4); background-repeat: repeat-x; filter: progid:dximagetransform.microsoft.gradient(startColorstr=#6eb6de, endColorstr=#4a77d4, GradientType=0);  border: 1px solid #3762bc; text-shadow: 1px 1px 1px rgba(0,0,0,0.4); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5); }
+.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] { filter: none; background-color: #4a77d4; }
+.btn-block { width: 40%; display:inline; }
+        
+        * { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+        
+        html { width: 100%; height:100%; overflow:hidden; }
+    
+        body {
+          margin:0;
+        }
+        
+        h1 {
+          font-family: 'Lato', sans-serif;
+          font-weight:300;
+          letter-spacing: 2px;
+          font-size:48px;
+        }
+        p {
+          font-family: 'Lato', sans-serif;
+          letter-spacing: 1px;
+          font-size:14px;
+          color: #333333;
+        }
+        
+        .header {
+          position:relative;
+          text-align:center;
+          background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+          color:white;
+        }
+        .logo {
+          width:50px;
+          fill:white;
+          padding-right:15px;
+          display:inline-block;
+          vertical-align: middle;
+        }
+        
+        .inner-header {
+          height:65vh;
+          width:100%;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .flex { 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        
+        .waves {
+          position:relative;
+          width: 100%;
+          height:15vh;
+          margin-bottom:-7px;
+          min-height:100px;
+          max-height:150px;
+        }
+        
+        .content {
+          position:relative;
+          height:20vh;
+          text-align:center;
+          background-color: white;
+        }
+        
+        /* Animation */
+        
+        .parallax > use {
+          animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+        }
+        .parallax > use:nth-child(1) {
+          animation-delay: -2s;
+          animation-duration: 7s;
+        }
+        .parallax > use:nth-child(2) {
+          animation-delay: -3s;
+          animation-duration: 10s;
+        }
+        .parallax > use:nth-child(3) {
+          animation-delay: -4s;
+          animation-duration: 13s;
+        }
+        .parallax > use:nth-child(4) {
+          animation-delay: -5s;
+          animation-duration: 20s;
+        }
+        @keyframes move-forever {
+          0% {
+          transform: translate3d(-90px,0,0);
+          }
+          100% { 
+            transform: translate3d(85px,0,0);
+          }
+        }
+        @media (max-width: 768px) {
+          .waves {
+            height:40px;
+            min-height:40px;
+          }
+          .content {
+            height:30vh;
+          }
+        }
+        .login {     backdrop-filter: blur(18px);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;    position: absolute;
+            padding: inherit;
+            top: 40%;
+            padding: 25px;
+          box-sizing: border-box;
+          opacity: 20px;
+
+	animation: gradient 15s ease infinite;
+          
+  
+
+        
+    
+        border-radius: 4px;
+    
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+     
+          /* From https://css.glass */
+    
+  
+    backdrop-filter: blur(10px);backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    
+          
+            
+            left: 40%;
+            margin: -150px 0 0 -150px;
+            width: 500px;
+            height: 400px;
+            
+          
+          }
+
+
+            @keyframes gradient {
+              0% {
+                background-position: 0% 50%;
+              }
+              50% {
+                background-position: 100% 50%;
+              }
+              100% {
+                background-position: 0% 50%;
+              }
+            }
+            
+        .login h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; font-size:40px}
+        
+        input { 
+
+            width: 100%; 
+            margin-bottom: 10px; 
+            background: rgba(0,0,0,0.3);
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 13px;
+            color: #fff;
+            border: 1px solid rgba(0,0,0,0.3);
+            border-radius: 4px;
+            box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+            
+        }
+        input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+        
+        
+        
+        
+        select{ width: 100%; 
+            margin-bottom: 10px; 
+            background: rgba(0,0,0,0.3);
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 13px;
+            color: #fff;
+            border: 1px solid rgba(0,0,0,0.3);
+            border-radius: 4px;
+            box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+            -webkit-transition: box-shadow .5s ease;
+            -moz-transition: box-shadow .5s ease;
+            -o-transition: box-shadow .5s ease;
+            -ms-transition: box-shadow .5s ease;
+            transition: box-shadow .5s ease;
+            }::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+                color:  white;
+           opacity:  1;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+           color:  white;
+           opacity:  1;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:  white;
+           opacity:  1;
+        }
+        
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color:  white;
+           opacity:  1;
+        }
+        
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color:  white;
+           opacity:  1;
+        
+        }
+        
+        ::placeholder { /* Most modern browsers support this now. */
+            color:  white;
+           opacity:  0.6;
+        }
+        
+            
+            
+        
+            .button {
+            
+            
+            
+                position: relative;
+            padding: 8px 16px;
+            margin: 8px 20px;
+            border: none;
+            outline: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+    </style>
+    
+    
+    
+      
+        <div class="header">
+          
+        <!--Content before waves-->
+        <div class="inner-header flex">
+        <!--Just the logo.. Don't mind this-->
+        
+        
+        <path fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
+        <g><path fill="#fff"
+        d="M250.4,0.8C112.7,0.8,1,112.4,1,250.2c0,137.7,111.7,249.4,249.4,249.4c137.7,0,249.4-111.7,249.4-249.4
+        C499.8,112.4,388.1,0.8,250.4,0.8z M383.8,326.3c-62,0-101.4-14.1-117.6-46.3c-17.1-34.1-2.3-75.4,13.2-104.1
+        c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3,62.4c-19.8,19.1-51.6,26.9-100.2,24.6l1.8-39.7		c35.9,1.6,59.7-2.9,70.8-13.6c8.9-8.6,11.1-22.9,13.5-39.6c6.3-42,14.8-99.4,141.4-99.4h41L333,166c-12.6,16-45.4,68.2-31.2,96.2	c9.2,18.3,41.5,25.6,91.2,24.2l1.1,39.8C390.5,326.2,387.1,326.3,383.8,326.3z" />
+        </g>
+      </div>
+      <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+        </svg>
+        </div>
+        </div>
+        
+        <!--Waves Container-->
+        
+        <!--Waves end-->
+        
+        
+        <!--Header ends-->
+        
+        <!--Content starts-->
+        
+    
+        
+        <!--Content ends-->
+        
+    
+      </div>
+      <div class="leaf">
+      <div>  <img src="{{url_for('static', filename='15.png')}}" height="90px" width="90px"></img></div>
+       <div><img src="{{url_for('static', filename='5.png')}}" height="90px" width="90px"></img></div>
+       <div>  <img src="{{url_for('static', filename='6.png')}}" height="90px" width="90px" ></img></div>
+       <div><img  src="{{url_for('static', filename='7.png')}}" height="90px" width="90px"></img></div>
+        <div> <img src="{{url_for('static', filename='8.png')}}" height="90px" width="90px"></img></div>
+      <div>   <img src="{{url_for('static', filename='9.png')}}" height="90px" width="90px"></div>
+      
+      <div><img src="{{url_for('static', filename='10.png')}}" height="90px" width="90px"></div>
+             
+      </div>
+      
+      <div class="leaf leaf1">
+      <div>  <img src="{{url_for('static', filename='bottle.png')}}" height="90px" width="90px"></img></div>
+       <div><img src="{{url_for('static', filename='Blood bag.png')}}" height="90px" width="90px"></img></div>
+       <div>  <img src="{{url_for('static', filename='Blood Pressure.png')}}" height="90px" width="90px" ></img></div>
+       <div><img  src="{{url_for('static', filename='16.png')}}" height="90px" width="90px"></img></div>
+        <div> <img src="{{url_for('static', filename='12.png')}}" height="90px" width="90px"></img></div>
+      <div>   <img src="{{url_for('static', filename='15.png')}}" height="90px" width="90px"></div>
+      <div><img src="{{url_for('static', filename='1.png')}}" height="90px" width="90px"></div>
+             
+      </div>
+      
+      <div class="leaf leaf2">
+      <div>  <img src="{{url_for('static', filename='5.png')}}" height="90px" width="90px"></img></div>
+       <div><img src="{{url_for('static', filename='6.png')}}" height="90px" width="90px"></img></div>
+       <div>  <img src="{{url_for('static', filename='8.png')}}" height="90px" width="90px" ></img></div>
+       <div><img  src="{{url_for('static', filename='10.png')}}" height="90px" width="90px"></img></div>
+ 
+        <div> <img src="{{url_for('static', filename='11.png')}}" height="90px" width="90px"></img></div>
+      <div>   <img src="{{url_for('static', filename='12.png')}}" height="90px" width="90px"></div>
+      <div><img src="{{url_for('static', filename='16.png')}}" height="90px" width="90px"></div>
+             
+      </div>
+     
+     
+     <div class="login">
+    
+        <h1>BRAND NAME GENERATOR</h1>
+        <form action='/predict' method="POST">
+          
+        
+        
+            <input type="text"  name="seed" id="lun" placeholder="Enter molecule name"  style="text-align: center;" required="required">
+                
+              
+            
+            
+            
+            <select type="text"   name="membership" id="membership"style="text-align: center;"required = "required">
+                
+                
+                <option value=""style="text-align: center;"style="color: blue; opacity:1">Choose any country</option>
+                <option label="ALGERIA">ALGERIA</option>
+                <option label="ARGENTINA">ARGENTINA</option>
+                <option value="AUSTRALIA">AUSTRALIA</option>
+                <option value="AUSTRIA">AUSTRIA</option>
+                <option value="BANGLADESH">BANGLADESH</option>
+                <option value="BELARUS">BELARUS</option>
+                <option value="BELGIUM">BELGIUM</option>
+                <option value="BOSNIA">BOSNIA</option>
+                <option value="BRAZIL">BRAZIL</option>
+                <option value="BULGARIA">BULGARIA</option>
+                <option value="CANADA">CANADA</option>
+                <option value="CENTRALAMERICA">CENTRALAMERICA</option>
+                <option value="CHILE">CHILE</option>
+                <option value="CHINA">CHINA</option>
+                <option value="COLOMBIA">COLOMBIA</option>
+                <option value="CROATIA">CROATIA</option>
+                <option value="CZECHREPUBLIC">CZECHREPUBLIC</option>
+                <option value="DOMINICANREPUBLIC">DOMINICANREPUBLIC</option>
+                <option value="ECUADOR">ECUADOR</option>
+                <option value="EGYPT">EGYPT</option>
+                <option value="ESTONIA">ESTONIA</option>
+                <option value="FINLAND">FINLAND</option>
+                <option value="FRANCE">FRANCE</option>
+                <option value="FRENCHWESTAFRICA">FRENCHWESTAFRICA</option>
+                <option value="GERMANY">GERMANY</option>
+                <option value="GREECE">GREECE</option>
+                <option value="HONGKONG">HONGKONG</option>
+                <option value="HUNGARY">HUNGARY</option>
+                <option value="INDIA">INDIA</option>
+                <option value="INDONESIA">INDONESIA</option>
+                <option value="IRELAND">IRELAND</option>
+                <option value="ITALY">ITALY</option>
+                <option value="JAPAN">JAPAN</option>
+                <option value="JORDAN">JORDAN</option>
+                <option value="KAZAKHSTAN">KAZAKHSTAN</option>
+                <option value="KOREA">KOREA</option>
+                <option value="KUWAIT">KUWAIT</option>
+                <option value="LATVIA">LATVIA</option>
+                <option value="LEBANON">LEBANON</option>
+                <option value="LITHUANIA">LITHUANIA</option>
+                <option value="LUXEMBOURG">LUXEMBOURG</option>
+                <option value="MALAYSIA">MALAYSIA</option>
+                <option value="MEXICO">MEXICO</option>
+                <option value="MOROCCO">MOROCCO</option>
+                <option value="NETHERLANDS">NETHERLANDS</option>
+                <option value="NEWZEALAND">NEWZEALAND</option>
+                <option value="NORWAY">NORWAY</option>
+                <option value="PAKISTAN">PAKISTAN</option>
+                <option value="PERU">PERU</option>
+                <option value="PHILIPPINES">PHILIPPINES</option>
+                <option value="POLAND">POLAND</option>
+                <option value="PORTUGAL">PORTUGAL</option>
+                <option value="PUERTORICO">PUERTORICO</option>
+                <option value="ROMANIA">ROMANIA</option>
+                <option value="RUSSIA">RUSSIA</option>
+                <option value="SAUDIARABIA">SAUDIARABIA</option>
+                <option value="SERBIA">SERBIA</option>
+                <option value="SINGAPORE">SINGAPORE</option>
+                <option value="SLOVAKIA">SLOVAKIA</option>
+                <option value="SLOVENIA">SLOVENIA</option>
+                <option value="SOUTHAFRICA">SOUTHAFRICA</option>
+                <option value="SPAIN">SPAIN</option>
+                <option value="SRILANKA">SRILANKA</option>
+                <option value="SWEDEN">SWEDEN</option>
+                <option value="SWITZERLAND">SWITZERLAND</option>
+                <option value="TAIWAN">TAIWAN</option>
+                <option value="THAILAND">THAILAND</option>
+                <option value="TUNISIA">TUNISIA</option>
+                <option value="TURKEY">TURKEY</option>
+                <option value="UAE">UAE</option>
+                <option value="UK">UK</option>
+                <option value="URUGUAY">URUGUAY</option>
+                <option value="US">US</option>
+                <option value="VENEZUELA">VENEZUELA</option>
+                <option value="VIETNAM">VIETNAM</option>
+    
+            </select>
+            
+            <button type="submit" class="button btn btn-primary btn-block btn-large">Submit</button>
+            <button type="reset"  class="button  reset btn btn-primary btn-block btn-large">Reset</button>
+            
+    
+        <h3 align="center"<b>{{pred}}</b>
+        <h4 align="center"<b>{{text}}</b>
+        </form>
+        </div>
+    </div>
+    </section>
+    </body>
+</html>
