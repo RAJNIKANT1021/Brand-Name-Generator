@@ -6,7 +6,7 @@ import tensorflow as tf
 import random
 membership=""
 # reading the csv file
-df=pd.read_csv(r'C:\Users\HP\Desktop\BrandName\62fdbb2cc8ccc_Brand_name_generator_Data__1_.csv')
+df=pd.read_csv(r'62fdbb2cc8ccc_Brand_name_generator_Data__1_.csv')
 df.dropna(inplace=True)
 df.isna().sum()
 
@@ -126,7 +126,7 @@ print(num_chars)
 from tensorflow.keras.models import load_model
 
 #loading the saved model
-new_model=load_model(r'C:\Users\HP\Desktop\BrandName\Trainedat90%.h5')
+new_model=load_model(r'Trainedat90%.h5')
 
 new_model
 

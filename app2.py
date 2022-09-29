@@ -25,7 +25,7 @@ def hello_world():
 def brand():
         seed = request.form["seed"]
         membership = request.form["membership"]
-        df=pd.read_csv(r'C:\Users\HP\Desktop\BrandName\62fdbb2cc8ccc_Brand_name_generator_Data__1_.csv')
+        df=pd.read_csv(r'62fdbb2cc8ccc_Brand_name_generator_Data__1_.csv')
         df.dropna(inplace=True)
         df.isna().sum()
         df.drop_duplicates(keep='first', inplace=True)
